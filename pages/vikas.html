@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin:0; padding:0; background:#f5f7fa; color:#333;">
+
+  <!-- Navbar -->
+  <div class="navbar" style="background:linear-gradient(90deg, #1e3c72, #2a5298); padding:15px 30px; display:flex; justify-content:flex-end; gap:20px; position:sticky; top:0;">
+    <a href="#" style="color:white; text-decoration:none; font-weight:bold; transition:0.3s;">Home</a>
+    <a href="#popup1" style="color:white; text-decoration:none; font-weight:bold; transition:0.3s;">Contact Us</a>
+  </div>
+
+  <!-- Heading -->
+  <h1 style="text-align:center; margin-top:40px; font-size:36px; color:#1e3c72;">My Portfolio</h1>
+
+  <!-- Profile Image -->
+  <div style="text-align:center; margin:20px 0;">
+    <img src="../src/assets/images/vikas.JPG" alt="Profile Image" style="width:200px; height:200px; border-radius:50%; border:5px solid #2a5298; box-shadow:0 6px 20px rgba(0,0,0,0.2);">
+  </div>
+
+  <!-- Description Box -->
+  <div class="description" style="max-width:800px; margin:30px auto; background:white; padding:30px; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.1); text-align:center;">
+    <p style="font-size:18px; line-height:1.8;">
+      Hello! My name is <strong>Vikas</strong>, and this is my personal portfolio website.  
+      I’m passionate about <b>technology, web development, and problem solving</b>.  
+      Here you can find information about my skills, projects, and achievements.  
+      Stay tuned for more updates!
+    </p>
+  </div>
+
+  <!-- Contact Popup -->
+  <div id="popup1" class="popup" style="position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); display:none; align-items:center; justify-content:center;">
+    <div class="popup-content" style="background:white; padding:30px; border-radius:12px; width:350px; box-shadow:0 8px 20px rgba(0,0,0,0.2); position:relative;">
+      
+      <!-- Close Button -->
+      <a href="#" class="close" style="position:absolute; top:10px; right:15px; text-decoration:none; font-size:24px; color:#999;">&times;</a>
+      
+      <h2 style="text-align:center; margin-bottom:20px; color:#1e3c72;">Contact Us</h2>
+      
+      <form>
+        <label for="name" style="display:block; margin-bottom:5px; font-weight:bold;">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required style="width:100%; padding:10px; margin-bottom:15px; border:1px solid #ccc; border-radius:8px;">
+
+        <label for="email" style="display:block; margin-bottom:5px; font-weight:bold;">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" required style="width:100%; padding:10px; margin-bottom:15px; border:1px solid #ccc; border-radius:8px;">
+
+        <label for="message" style="display:block; margin-bottom:5px; font-weight:bold;">Message:</label>
+        <input type="text" id="message" placeholder="Your message" required style="width:100%; padding:10px; margin-bottom:20px; border:1px solid #ccc; border-radius:8px;">
+
+        <button type="submit" style="width:100%; background:#2a5298; color:white; padding:12px; border:none; border-radius:8px; font-size:16px; font-weight:bold; cursor:pointer; transition:0.3s;">
+          Send
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Small Script to Handle Popup -->
+  <script>
+    document.querySelectorAll('.navbar a[href="#popup1"]').forEach(el => {
+      el.addEventListener("click", e => {
+        e.preventDefault();
+        document.getElementById("popup1").style.display = "flex";
+      });
+    });
+    document.querySelectorAll('.popup .close').forEach(el => {
+      el.addEventListener("click", e => {
+        e.preventDefault();
+        document.getElementById("popup1").style.display = "none";
+      });
+    });
+  </script>
+
+</body>
+</html>
