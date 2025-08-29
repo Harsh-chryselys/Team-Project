@@ -1,0 +1,274 @@
+:root {
+  --clr-primary: blueviolet;
+  --clr-accent: red;
+  --clr-bg: orange;
+  --clr-light: #ffffff;
+  --max-width: 1200px;
+  --gap: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: var(--clr-bg);
+  font-family: 'Courier New', Courier, monospace;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: blueviolet;
+    font-weight: bold;
+}
+
+.active-link {
+    color: red !important;
+    border-bottom: 2px solid red;
+}
+
+#form-container {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-form {
+    display: none;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* --------------- Utilities --------------- */
+.section-title {
+  margin: 2rem 0 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.btn,
+.btn-outline {
+  width: fit-content;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn {
+  background: var(--clr-primary);
+  color: var(--clr-light);
+}
+
+.btn-outline {
+  border: 2px solid var(--clr-primary);
+  color: var(--clr-primary);
+}
+
+/* --------------- HERO (Flex) --------------- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.hero-text .cta-row {
+  margin-top: 1rem;
+  display: flex;
+  gap: var(--gap);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* --------------- PROJECTS (CSS Grid) --------------- */
+.projects-grid,
+.blog-grid {
+  display: grid;
+  gap: var(--gap);
+}
+
+.card {
+  background: var(--clr-light);
+  border-radius: 6px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card .link {
+  color: var(--clr-primary);
+  font-weight: bold;
+}
+
+/* --------------- ABOUT PAGE --------------- */
+.about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap);
+  padding: 2rem 1rem;
+}
+
+.avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.bio ul {
+  list-style: square inside;
+  margin-top: 0.5rem;
+}
+
+/* TIMELINE (Grid) */
+.timeline-grid {
+  display: grid;
+  gap: var(--gap);
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.timeline-item {
+  background: var(--clr-light);
+  border-left: 3px solid var(--clr-primary);
+  padding: 1rem;
+}
+
+.timeline-item .year {
+  font-weight: bold;
+  color: var(--clr-primary);
+}
+
+/* --------------- CONTACT PAGE --------------- */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+
+/* Overlay already has your #form-container rules */
+
+/* --------------- Footer --------------- */
+.footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* --------------- MEDIA QUERIES --------------- */
+@media (min-width: 600px) {
+  .projects-grid,
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about-me {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 900px) {
+  .projects-grid,
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .timeline-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width:600px) {   /* tablet & up */
+  body { padding: 0 2rem; }
+}
+
+/* ---------- Nav: mobile-friendly ---------- */
+.header {
+  padding:0.5rem 1rem;            /* slimmer gutters */
+}
+
+.nav-links {
+  flex-wrap:wrap;                 /* allow items to drop to a new line */
+  gap:1rem;
+  justify-content:center;         /* keep them centred when wrapped */
+  margin-top:0.5rem;              /* breathing room below logo */
+}
+
+/* Each link stays on one line; prevents weird wraps inside words */
+.nav-links a { white-space:nowrap; }
+
+/* If four links still overflow on very narrow phones, stack them */
+@media(max-width:380px){
+  .nav-links { flex-direction:column; align-items:center; }
+  .nav-links li { width:100%; text-align:center; }
+}
+
+
+.stack-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
+.stack-list li { background: var(--clr-light); padding: .3rem .6rem; border-radius: 4px; }
+
+/* ---------- Timeline: vertical cards ---------- */
+.timeline-grid{
+  display:flex;
+  flex-direction:column;   /* stack items */
+  gap:1rem;
+  padding:1rem 0;
+}
+.timeline-item{
+  border-left:3px solid var(--clr-primary);
+  border-radius:6px;
+  padding:1rem;
+}
+
+/* ---------- Responsive grids ---------- */
+.projects-grid,
+.blog-grid{
+  display:grid;
+  grid-template-columns:1fr;      /* mobile default */
+  gap:var(--gap);
+}
+
+@media(min-width:768px){
+  .projects-grid,
+  .blog-grid{ grid-template-columns:repeat(2,1fr); }
+}

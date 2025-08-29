@@ -1,68 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Palash Johri – Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-    <header>
-        <!-- Navbar -->
-        <nav class="navbar">
-            <div class="logo"><img src='./src/assets/images/logo.png' alt="logo" /></div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <!-- About Section -->
-        <section id="about" class="about-box">
-            <p>
-                Welcome to our website! We are a passionate team dedicated to delivering
-                high-quality solutions that make an impact. Our mission is to innovate
-                and create meaningful experiences for our users.
-            </p>
-        </section>
+  <header class="header">
+    <h1>Palash Johri</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="/index.html" class="active-link">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <!-- Our Team Section -->
-        <section class="team-section">
-            <h2>Our Team</h2>
-            <div class="team-container">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Rapid-prototype & Full-stack Dev</h2>
+      <p>
+        I turn <em>wild ideas</em> into production-ready software overnight,
+        shipping early and iterating fast.
+      </p>
 
-                <a href="./pages/vikas.html" class="team-card">
-                    <img src="./src/assets/images/vikas.JPG" alt="Member 1">
-                    <h3>Vikas Jha</h3>
-                    <p>Frontend Developer</p>
-                </a>
+      <div class="cta-row">
+        <a href="https://github.com/holy-script" class="btn">GitHub</a>
+        <a href="https://in.linkedin.com/in/palash-johri-3301" class="btn-outline">LinkedIn</a>
+      </div>
+    </div>
+  </section>
 
-                <a href="member2.html" class="team-card">
-                    <img src="https://via.placeholder.com/150" alt="Member 2">
-                    <h3>Jane Smith</h3>
-                    <p>Designer</p>
-                </a>
+  <!-- FEATURED PROJECTS -->
+  <section class="projects">
+    <h2 class="section-title">Featured Projects</h2>
 
-                <a href="member3.html" class="team-card">
-                    <img src="https://via.placeholder.com/150" alt="Member 3">
-                    <h3>Michael Lee</h3>
-                    <p>Project Manager</p>
-                </a>
+    <div class="projects-grid">
+      <article class="card">
+        <h3>Riffr 🔗</h3>
+        <p>
+          Privacy-first photo-montage builder (Vue 3 + TensorFlow-Node) that won
+          IIT-B FOSSEE Hackathon. Face detection runs locally for zero data leak.
+        </p>
+        <a href="#" class="link">Live demo →</a>
+      </article>
 
-                <a href="member4.html" class="team-card">
-                    <img src="https://via.placeholder.com/150" alt="Member 4">
-                    <h3>Sara Khan</h3>
-                    <p>Marketing</p>
-                </a>
+      <article class="card">
+        <h3>N8N AI Legal Workflows</h3>
+        <p>
+          Automated TCPA/TILA case prep with N8N, Google Gemini API and Workspace
+          integrations—cuts paralegal time by 70 %.
+        </p>
+        <a href="#" class="link">Workflow details →</a>
+      </article>
 
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Chryselys. All rights reserved.</p>
-    </footer>
+      <article class="card">
+        <h3>URLINK SaaS Platform</h3>
+        <p>
+          Deep-link creation & analytics tool (Next.js + TypeScript + Supabase)
+          focused on speed, UX and real-time tracking.
+        </p>
+        <a href="#" class="link">Case study →</a>
+      </article>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Palash Johri</p>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
