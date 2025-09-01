@@ -6,151 +6,82 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient(90deg, #1e3c72, #2a5298);
-  padding: 15px 50px;
-  color: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+html {
+  scroll-behavior: smooth;
 }
 
-.navbar .logo {
-  font-size: 24px;
-  font-weight: bold;
-  letter-spacing: 1px;
+/* Custom 3D Shine Effect for Logo with ID selector for stronger specificity */
+#logo-img {
+  --a: 12deg;
+  aspect-ratio: 1;
+  transform: perspective(400px) rotate3d(var(--r,1,-1),0,calc(var(--i,1)*var(--a)));
+  -webkit-mask: 
+    linear-gradient(135deg,#000c 30%,#000,#000c 70%)
+    100% 100%/250% 250%;
+  transition: 0.8s;
+  cursor: pointer;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 25px;
+#logo-img:hover {
+  --i: -1;
+  -webkit-mask-position: 0 0;
+  transition: 0.8s;
 }
 
-.nav-links li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
+/* Custom Modal Animation */
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
-.nav-links li a:hover {
-  color: #ffd700;
+.modal-content {
+  animation: modalAppear 0.3s ease-out;
 }
 
-/* About Section */
-.about-box {
-  background: #ffffff;
-  margin: 40px auto;
-  padding: 50px 30px;
-  text-align: center;
-  max-width: 900px;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+/* Custom Progress Bar Animation */
+.progress-fill {
+  background: linear-gradient(90deg, #48bb78, #38a169);
+  transition: width 0.5s ease;
 }
 
-.about-box p {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #444;
-}
-
-/* Team Section */
-.team-section {
-  padding: 60px 20px;
-  text-align: center;
-  background: #f9fafc;
-}
-
-.team-section h2 {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 40px;
-  color: #222;
-  position: relative;
-}
-
-.team-section h2::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: #2a5298;
-  margin: 12px auto 0;
-  border-radius: 2px;
-}
-
-/* Team Grid */
-.team-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-/* Team Card */
-.team-card {
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 20px;
-  padding: 25px 20px;
-  text-decoration: none;
-  color: #333;
-  transition: all 0.4s ease;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  backdrop-filter: blur(10px);
-}
-
-.team-card img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #2a5298;
-  margin-bottom: 15px;
-  transition: transform 0.3s ease;
-}
-
-.team-card h3 {
-  margin: 10px 0 5px;
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.team-card p {
-  font-size: 15px;
-  color: #666;
-}
-
-/* Hover Effects */
+/* Custom Team Card Hover Effects */
 .team-card:hover {
   transform: translateY(-12px) scale(1.03);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
 .team-card:hover img {
   transform: rotate(-3deg) scale(1.1);
 }
 
-/* Footer */
-footer {
-  background: linear-gradient(90deg, #1e3c72, #2a5298);
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  margin-top: 50px;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+/* Custom Week Card Styling */
+.week-card.completed {
+  background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 100%);
 }
 
-footer p {
-  margin: 0;
-  letter-spacing: 0.5px;
+.week-card.upcoming {
+  background: linear-gradient(135deg, #ebf8ff 0%, #bee3f8 100%);
+}
+
+/* Custom Backdrop Blur for Modal */
+.modal-overlay {
+  backdrop-filter: blur(4px);
+}
+
+/* Custom Gradient Backgrounds */
+.gradient-primary {
+  background: linear-gradient(90deg, #1e3c72, #2a5298);
+}
+
+.gradient-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gradient-contact-form {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
 }
