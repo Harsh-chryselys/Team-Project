@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
+    <title>Chryselys PVT Limited Training</title>
+    <!-- Tailwind CSS CDN for easy setup -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Your original stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="bg-gray-50">
     <header>
         <!-- Navbar -->
         <nav class="navbar">
@@ -16,6 +19,8 @@
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <!-- New link to the Blog section -->
+                <li><a href="#blog">Blog</a></li>
             </ul>
         </nav>
     </header>
@@ -33,36 +38,159 @@
         <section class="team-section">
             <h2>Our Team</h2>
             <div class="team-container">
-
                 <a href="./pages/vikas.html" class="team-card">
                     <img src="./src/assets/images/vikas.JPG" alt="Member 1">
                     <h3>Vikas Jha</h3>
                     <p>Frontend Developer</p>
                 </a>
-
                 <a href="member2.html" class="team-card">
                     <img src="https://via.placeholder.com/150" alt="Member 2">
                     <h3>Jane Smith</h3>
                     <p>Designer</p>
                 </a>
-
                 <a href="member3.html" class="team-card">
                     <img src="https://via.placeholder.com/150" alt="Member 3">
                     <h3>Michael Lee</h3>
                     <p>Project Manager</p>
                 </a>
-
                 <a href="member4.html" class="team-card">
                     <img src="https://via.placeholder.com/150" alt="Member 4">
                     <h3>Sara Khan</h3>
                     <p>Marketing</p>
                 </a>
+            </div>
+        </section>
+
+        <!-- New Technical Blog Section -->
+        <section id="blog" class="py-16 bg-white sm:py-20 lg:py-24">
+            <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                <div class="max-w-xl mx-auto text-center">
+                    <h2 class="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl xl:text-5xl">
+                        Our Technical Blog
+                    </h2>
+                    <p class="mt-4 text-base leading-7 text-gray-600 sm:mt-6">
+                        Explore the latest insights and trends in technology and development from our expert team.
+                    </p>
+                </div>
+
+                <!-- Blog Posts Grid -->
+                <div class="grid max-w-md grid-cols-1 gap-8 mx-auto mt-12 sm:mt-16 md:max-w-none md:grid-cols-2 lg:grid-cols-3">
+                    
+                    <!-- Blog Post Card 1 -->
+                    <div class="flex flex-col overflow-hidden transition-all duration-300 transform bg-white border border-gray-100 rounded-lg shadow-lg group hover:shadow-2xl hover:-translate-y-2">
+                        <a href="#" title="Link to blog post" class="block overflow-hidden">
+                            <img class="object-cover w-full h-56 transition-all duration-300 group-hover:scale-110" src="https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&w=800&q=60" alt="Photo of code on a screen" />
+                        </a>
+                        <div class="flex flex-col flex-1 p-6">
+                            <div class="flex-1">
+                                <p class="text-sm font-semibold text-indigo-600">
+                                    Frontend
+                                </p>
+                                <a href="#" title="" class="block mt-3">
+                                    <p class="text-xl font-bold text-gray-900">
+                                        An Introduction to Tailwind CSS
+                                    </p>
+                                    <p class="mt-4 text-base text-gray-600">
+                                        Discover how Tailwind's utility-first approach can revolutionize your workflow and help you build beautiful, custom designs without leaving your HTML.
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="flex items-center pt-5 mt-auto border-t border-gray-200">
+                                <img class="flex-shrink-0 object-cover w-11 h-11 rounded-full" src="./src/assets/images/vikas.JPG" alt="Vikas Jha's avatar" />
+                                <div class="ml-4">
+                                    <p class="text-sm font-semibold text-gray-900">
+                                        Vikas Jha
+                                    </p>
+                                    <p class="text-sm text-gray-600">
+                                        Sep 1, 2025
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post Card 2 -->
+                    <div class="flex flex-col overflow-hidden transition-all duration-300 transform bg-white border border-gray-100 rounded-lg shadow-lg group hover:shadow-2xl hover:-translate-y-2">
+                         <a href="#" title="Link to blog post" class="block overflow-hidden">
+                            <img class="object-cover w-full h-56 transition-all duration-300 group-hover:scale-110" src="https://images.unsplash.com/photo-1547721064-da6cfb341d50?auto=format&fit=crop&w=800&q=60" alt="Abstract design image" />
+                        </a>
+                        <div class="flex flex-col flex-1 p-6">
+                            <div class="flex-1">
+                                <p class="text-sm font-semibold text-pink-600">
+                                    Design
+                                </p>
+                                <a href="#" title="" class="block mt-3">
+                                    <p class="text-xl font-bold text-gray-900">
+                                       The Principles of Modern UI/UX Design
+                                    </p>
+                                    <p class="mt-4 text-base text-gray-600">
+                                        A look into the core principles that drive user-friendly and aesthetically pleasing interfaces in today's digital landscape.
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="flex items-center pt-5 mt-auto border-t border-gray-200">
+                                <img class="flex-shrink-0 object-cover w-11 h-11 rounded-full" src="https://via.placeholder.com/150" alt="Jane Smith's avatar" />
+                                <div class="ml-4">
+                                    <p class="text-sm font-semibold text-gray-900">
+                                        Jane Smith
+                                    </p>
+                                    <p class="text-sm text-gray-600">
+                                        Aug 28, 2025
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post Card 3 -->
+                    <div class="flex flex-col overflow-hidden transition-all duration-300 transform bg-white border border-gray-100 rounded-lg shadow-lg group hover:shadow-2xl hover:-translate-y-2">
+                        <a href="#" title="Link to blog post" class="block overflow-hidden">
+                            <img class="object-cover w-full h-56 transition-all duration-300 group-hover:scale-110" src="https://images.unsplash.com/photo-1504253163759-c23f6c765e21?auto=format&fit=crop&w=800&q=60" alt="Server room image" />
+                        </a>
+                        <div class="flex flex-col flex-1 p-6">
+                            <div class="flex-1">
+                                <p class="text-sm font-semibold text-green-600">
+                                    DevOps
+                                </p>
+                                <a href="#" title="" class="block mt-3">
+                                    <p class="text-xl font-bold text-gray-900">
+                                        CI/CD Pipelines: A Practical Guide
+                                    </p>
+                                    <p class="mt-4 text-base text-gray-600">
+                                        Automating your build, test, and deployment processes is crucial. Here's a practical guide to getting started with CI/CD pipelines.
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="flex items-center pt-5 mt-auto border-t border-gray-200">
+                                <img class="flex-shrink-0 object-cover w-11 h-11 rounded-full" src="https://via.placeholder.com/150" alt="Michael Lee's avatar" />
+                                <div class="ml-4">
+                                    <p class="text-sm font-semibold text-gray-900">
+                                        Michael Lee
+                                    </p>
+                                    <p class="text-sm text-gray-600">
+                                        Aug 25, 2025
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Call to Action Button -->
+                <div class="mt-12 text-center">
+                     <a href="#" title="View all blog posts" class="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white transition-all duration-200 bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600" role="button">
+                        View All Posts
+                    </a>
+                </div>
 
             </div>
         </section>
+
     </main>
     <footer>
         <p>&copy; 2025 Chryselys. All rights reserved.</p>
     </footer>
 </body>
+
 </html>
