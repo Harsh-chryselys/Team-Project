@@ -4,193 +4,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chryselys PVT Limited Training</title>
-    <!-- Tailwind CSS CDN for easy setup -->
+    <title>Frontend Training Cumulative Project</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Your original stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-gray-50">
     <header>
-        <!-- Navbar -->
-        <nav class="navbar">
-            <div class="logo"><img src='./src/assets/images/logo.png' alt="logo" /></div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <!-- New link to the Blog section -->
-                <li><a href="#blog">Blog</a></li>
-            </ul>
+        <nav class="gradient-primary sticky top-0 z-50 px-5 md:px-10 lg:px-12 py-4">
+            <div class="flex justify-between items-center text-white">
+                <div class="flex items-center gap-3 text-xl md:text-2xl font-bold tracking-wide">
+                    <img id="logo-img" src='./src/assets/images/logo.png' alt="logo" class="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 object-contain rounded-2xl" />
+                    <span class="hidden md:inline">Frontend Training</span>
+                </div>
+                
+                <ul class="nav-links fixed md:static top-full left-0 w-full md:w-auto gradient-primary md:bg-none flex flex-col md:flex-row gap-0 md:gap-6 p-5 md:p-0 transform -translate-x-full md:translate-x-0 transition-transform duration-300">
+                    <li class="py-2 md:py-0 px-5 md:px-0">
+                        <a href="#home" class="block text-white hover:text-yellow-300 transition-colors duration-300 py-2 md:py-0 font-medium">Home</a>
+                    </li>
+                    <li class="py-2 md:py-0 px-5 md:px-0">
+                        <a href="about.html" class="block text-white hover:text-yellow-300 transition-colors duration-300 py-2 md:py-0 font-medium">About</a>
+                    </li>
+                    <li class="py-2 md:py-0 px-5 md:px-0">
+                        <a href="blog.html" class="block text-white hover:text-yellow-300 transition-colors duration-300 py-2 md:py-0 font-medium">Blog</a>
+                    </li>
+                    <li class="py-2 md:py-0 px-5 md:px-0">
+                        <a href="contact.html" class="block text-white hover:text-yellow-300 transition-colors duration-300 py-2 md:py-0 font-medium">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="hamburger md:hidden flex flex-col cursor-pointer gap-1">
+                    <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+                    <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+                    <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+                </div>
+            </div>
         </nav>
     </header>
-    <main>
-        <!-- About Section -->
-        <section id="about" class="about-box">
-            <p>
-                Welcome to our website! We are a passionate team dedicated to delivering
-                high-quality solutions that make an impact. Our mission is to innovate
-                and create meaningful experiences for our users.
-            </p>
-        </section>
 
-        <!-- Our Team Section -->
-        <section class="team-section">
-            <h2>Our Team</h2>
-            <div class="team-container">
-                <a href="./pages/vikas.html" class="team-card">
-                    <img src="./src/assets/images/vikas.JPG" alt="Member 1">
-                    <h3>Vikas Jha</h3>
-                    <p>Frontend Developer</p>
-                </a>
-                <a href="member2.html" class="team-card">
-                    <img src="https://via.placeholder.com/150" alt="Member 2">
-                    <h3>Jane Smith</h3>
-                    <p>Designer</p>
-                </a>
-                <a href="member3.html" class="team-card">
-                    <img src="https://via.placeholder.com/150" alt="Member 3">
-                    <h3>Michael Lee</h3>
-                    <p>Project Manager</p>
-                </a>
-                <a href="member4.html" class="team-card">
-                    <img src="https://via.placeholder.com/150" alt="Member 4">
-                    <h3>Sara Khan</h3>
-                    <p>Marketing</p>
-                </a>
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="gradient-hero text-white text-center py-20 px-5 min-h-[60vh] flex items-center justify-center">
+            <div class="max-w-4xl">
+                <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight">Frontend Training Cumulative Project</h1>
+                <p class="text-lg md:text-xl mb-8 opacity-90">Showcasing our journey through modern web development technologies</p>
+                <a href="about.html" class="inline-block bg-yellow-400 text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-yellow-300 transform hover:-translate-y-1 transition-all duration-300">Learn More</a>
             </div>
         </section>
 
-        <!-- New Technical Blog Section -->
-        <section id="blog" class="py-16 bg-white sm:py-20 lg:py-24">
-            <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-                <div class="max-w-xl mx-auto text-center">
-                    <h2 class="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl xl:text-5xl">
-                        Our Technical Blog
+        <!-- Skills Section -->
+        <section id="skills" class="py-16 bg-white">
+            <div class="max-w-6xl mx-auto px-5">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3 relative">
+                        What We've Learned So Far
+                        <div class="w-20 h-1 bg-blue-600 mx-auto mt-3 rounded"></div>
                     </h2>
-                    <p class="mt-4 text-base leading-7 text-gray-600 sm:mt-6">
-                        Explore the latest insights and trends in technology and development from our expert team.
-                    </p>
+                    <p class="text-gray-600 text-lg italic">Completed: Week 1 & 2 of our 6-week Frontend Development Curriculum</p>
                 </div>
-
-                <!-- Blog Posts Grid -->
-                <div class="grid max-w-md grid-cols-1 gap-8 mx-auto mt-12 sm:mt-16 md:max-w-none md:grid-cols-2 lg:grid-cols-3">
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+                    <div class="bg-white p-8 rounded-2xl text-center shadow-lg border-2 border-gray-200 hover:border-blue-600 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 relative">
+                        <div class="absolute top-4 right-4 bg-blue-600 text-white px-2 py-1 rounded-lg text-xs font-semibold">Week 1</div>
+                        <div class="text-4xl mb-4">🌐</div>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-900">HTML5</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Semantic markup, forms, accessibility basics, and modern web standards</p>
+                    </div>
                     
-                    <!-- Blog Post Card 1 -->
-                    <div class="flex flex-col overflow-hidden transition-all duration-300 transform bg-white border border-gray-100 rounded-lg shadow-lg group hover:shadow-2xl hover:-translate-y-2">
-                        <a href="#" title="Link to blog post" class="block overflow-hidden">
-                            <img class="object-cover w-full h-56 transition-all duration-300 group-hover:scale-110" src="https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&w=800&q=60" alt="Photo of code on a screen" />
-                        </a>
-                        <div class="flex flex-col flex-1 p-6">
-                            <div class="flex-1">
-                                <p class="text-sm font-semibold text-indigo-600">
-                                    Frontend
-                                </p>
-                                <a href="#" title="" class="block mt-3">
-                                    <p class="text-xl font-bold text-gray-900">
-                                        An Introduction to Tailwind CSS
-                                    </p>
-                                    <p class="mt-4 text-base text-gray-600">
-                                        Discover how Tailwind's utility-first approach can revolutionize your workflow and help you build beautiful, custom designs without leaving your HTML.
-                                    </p>
-                                </a>
-                            </div>
-                            <div class="flex items-center pt-5 mt-auto border-t border-gray-200">
-                                <img class="flex-shrink-0 object-cover w-11 h-11 rounded-full" src="./src/assets/images/vikas.JPG" alt="Vikas Jha's avatar" />
-                                <div class="ml-4">
-                                    <p class="text-sm font-semibold text-gray-900">
-                                        Vikas Jha
-                                    </p>
-                                    <p class="text-sm text-gray-600">
-                                        Sep 1, 2025
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="bg-white p-8 rounded-2xl text-center shadow-lg border-2 border-gray-200 hover:border-blue-600 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 relative">
+                        <div class="absolute top-4 right-4 bg-blue-600 text-white px-2 py-1 rounded-lg text-xs font-semibold">Week 2</div>
+                        <div class="text-4xl mb-4">🎨</div>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-900">CSS3</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Selectors, Box Model, Flexbox, Grid, and advanced styling techniques</p>
                     </div>
-
-                    <!-- Blog Post Card 2 -->
-                    <div class="flex flex-col overflow-hidden transition-all duration-300 transform bg-white border border-gray-100 rounded-lg shadow-lg group hover:shadow-2xl hover:-translate-y-2">
-                         <a href="#" title="Link to blog post" class="block overflow-hidden">
-                            <img class="object-cover w-full h-56 transition-all duration-300 group-hover:scale-110" src="https://images.unsplash.com/photo-1547721064-da6cfb341d50?auto=format&fit=crop&w=800&q=60" alt="Abstract design image" />
-                        </a>
-                        <div class="flex flex-col flex-1 p-6">
-                            <div class="flex-1">
-                                <p class="text-sm font-semibold text-pink-600">
-                                    Design
-                                </p>
-                                <a href="#" title="" class="block mt-3">
-                                    <p class="text-xl font-bold text-gray-900">
-                                       The Principles of Modern UI/UX Design
-                                    </p>
-                                    <p class="mt-4 text-base text-gray-600">
-                                        A look into the core principles that drive user-friendly and aesthetically pleasing interfaces in today's digital landscape.
-                                    </p>
-                                </a>
-                            </div>
-                            <div class="flex items-center pt-5 mt-auto border-t border-gray-200">
-                                <img class="flex-shrink-0 object-cover w-11 h-11 rounded-full" src="https://via.placeholder.com/150" alt="Jane Smith's avatar" />
-                                <div class="ml-4">
-                                    <p class="text-sm font-semibold text-gray-900">
-                                        Jane Smith
-                                    </p>
-                                    <p class="text-sm text-gray-600">
-                                        Aug 28, 2025
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                    
+                    <div class="bg-white p-8 rounded-2xl text-center shadow-lg border-2 border-gray-200 hover:border-blue-600 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 relative">
+                        <div class="absolute top-4 right-4 bg-blue-600 text-white px-2 py-1 rounded-lg text-xs font-semibold">Week 2</div>
+                        <div class="text-4xl mb-4">📱</div>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-900">Responsive Design</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Media queries, viewport units, and mobile-first development approach</p>
                     </div>
-
-                    <!-- Blog Post Card 3 -->
-                    <div class="flex flex-col overflow-hidden transition-all duration-300 transform bg-white border border-gray-100 rounded-lg shadow-lg group hover:shadow-2xl hover:-translate-y-2">
-                        <a href="#" title="Link to blog post" class="block overflow-hidden">
-                            <img class="object-cover w-full h-56 transition-all duration-300 group-hover:scale-110" src="https://images.unsplash.com/photo-1504253163759-c23f6c765e21?auto=format&fit=crop&w=800&q=60" alt="Server room image" />
-                        </a>
-                        <div class="flex flex-col flex-1 p-6">
-                            <div class="flex-1">
-                                <p class="text-sm font-semibold text-green-600">
-                                    DevOps
-                                </p>
-                                <a href="#" title="" class="block mt-3">
-                                    <p class="text-xl font-bold text-gray-900">
-                                        CI/CD Pipelines: A Practical Guide
-                                    </p>
-                                    <p class="mt-4 text-base text-gray-600">
-                                        Automating your build, test, and deployment processes is crucial. Here's a practical guide to getting started with CI/CD pipelines.
-                                    </p>
-                                </a>
-                            </div>
-                            <div class="flex items-center pt-5 mt-auto border-t border-gray-200">
-                                <img class="flex-shrink-0 object-cover w-11 h-11 rounded-full" src="https://via.placeholder.com/150" alt="Michael Lee's avatar" />
-                                <div class="ml-4">
-                                    <p class="text-sm font-semibold text-gray-900">
-                                        Michael Lee
-                                    </p>
-                                    <p class="text-sm text-gray-600">
-                                        Aug 25, 2025
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                    
+                    <div class="bg-white p-8 rounded-2xl text-center shadow-lg border-2 border-gray-200 hover:border-blue-600 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 relative">
+                        <div class="absolute top-4 right-4 bg-blue-600 text-white px-2 py-1 rounded-lg text-xs font-semibold">Week 2</div>
+                        <div class="text-4xl mb-4">🚀</div>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-900">Tailwind CSS</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Utility-first CSS framework for rapid and consistent UI development</p>
                     </div>
-
+                    
+                    <div class="bg-white p-8 rounded-2xl text-center shadow-lg border-2 border-gray-200 hover:border-blue-600 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 relative">
+                        <div class="absolute top-4 right-4 bg-blue-600 text-white px-2 py-1 rounded-lg text-xs font-semibold">Week 1</div>
+                        <div class="text-4xl mb-4">🔧</div>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-900">Development Tools</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">VS Code, Chrome DevTools, Live Server for efficient development workflow</p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-2xl text-center shadow-lg border-2 border-gray-200 hover:border-blue-600 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 relative">
+                        <div class="absolute top-4 right-4 bg-blue-600 text-white px-2 py-1 rounded-lg text-xs font-semibold">Week 1</div>
+                        <div class="text-4xl mb-4">📚</div>
+                        <h3 class="text-xl font-semibold mb-3 text-gray-900">Git & GitHub</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Version control, repository management, collaboration, and best practices</p>
+                    </div>
                 </div>
+                
+                <!-- Progress Section -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+                    <h3 class="text-xl font-semibold mb-5 text-gray-900">Training Progress</h3>
+                    <div class="w-full h-3 bg-gray-200 rounded-lg overflow-hidden mb-4">
+                        <div class="progress-fill h-full rounded-lg" style="width: 33.33%"></div>
+                    </div>
+                    <div class="flex justify-between text-sm text-gray-600 font-medium">
+                        <span>Week 2 of 6 Completed</span>
+                        <span>33% Complete</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <!-- Call to Action Button -->
-                <div class="mt-12 text-center">
-                     <a href="#" title="View all blog posts" class="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white transition-all duration-200 bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600" role="button">
-                        View All Posts
+        <!-- Team Section -->
+        <section class="py-16 bg-gray-50 text-center">
+            <div class="max-w-6xl mx-auto px-5">
+                <div class="mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3 relative">
+                        Our Team
+                        <div class="w-20 h-1 bg-blue-600 mx-auto mt-3 rounded"></div>
+                    </h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <a href="./pages/vikas.html" class="team-card bg-white/80 backdrop-blur-sm rounded-3xl p-6 text-gray-900 no-underline shadow-lg hover:shadow-2xl transition-all duration-400 flex flex-col items-center">
+                        <img src="./src/assets/images/vikas.JPG" alt="Vikas Jha" class="w-32 h-32 rounded-full object-cover border-4 border-blue-600 mb-4 transition-transform duration-300" />
+                        <h3 class="text-xl font-semibold mb-1">Vikas Jha</h3>
+                        <p class="text-gray-600 mb-3">Frontend Developer</p>
+                        <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-medium">Team Lead</span>
+                    </a>
+                    
+                    <a href="./pages/harshit.html" class="team-card bg-white/80 backdrop-blur-sm rounded-3xl p-6 text-gray-900 no-underline shadow-lg hover:shadow-2xl transition-all duration-400 flex flex-col items-center">
+                        <img src="https://via.placeholder.com/150" alt="Harshit Gunjal" class="w-32 h-32 rounded-full object-cover border-4 border-blue-600 mb-4 transition-transform duration-300" />
+                        <h3 class="text-xl font-semibold mb-1">Harshit Gunjal</h3>
+                        <p class="text-gray-600 mb-3">Frontend Developer</p>
+                        <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-medium">UI Specialist</span>
+                    </a>
+                    
+                    <a href="./pages/palash.html" class="team-card bg-white/80 backdrop-blur-sm rounded-3xl p-6 text-gray-900 no-underline shadow-lg hover:shadow-2xl transition-all duration-400 flex flex-col items-center">
+                        <img src="https://via.placeholder.com/150" alt="Palash Johri" class="w-32 h-32 rounded-full object-cover border-4 border-blue-600 mb-4 transition-transform duration-300" />
+                        <h3 class="text-xl font-semibold mb-1">Palash Johri</h3>
+                        <p class="text-gray-600 mb-3">Frontend Developer</p>
+                        <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-medium">JavaScript Expert</span>
+                    </a>
+                    
+                    <a href="./pages/chesta.html" class="team-card bg-white/80 backdrop-blur-sm rounded-3xl p-6 text-gray-900 no-underline shadow-lg hover:shadow-2xl transition-all duration-400 flex flex-col items-center">
+                        <img src="https://via.placeholder.com/150" alt="Chesta Mehta" class="w-32 h-32 rounded-full object-cover border-4 border-blue-600 mb-4 transition-transform duration-300" />
+                        <h3 class="text-xl font-semibold mb-1">Chesta Mehta</h3>
+                        <p class="text-gray-600 mb-3">Frontend Developer</p>
+                        <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-medium">Design Enthusiast</span>
                     </a>
                 </div>
-
             </div>
         </section>
-
     </main>
-    <footer>
-        <p>&copy; 2025 Chryselys. All rights reserved.</p>
+
+    <footer class="gradient-primary text-white text-center py-8 px-5 mt-12 shadow-lg">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-sm tracking-wide">&copy; 2025 Frontend Training Cumulative Project. All rights reserved.</p>
+            <div class="flex gap-5 flex-wrap justify-center">
+                <a href="about.html" class="text-white hover:text-yellow-300 transition-colors duration-300 text-sm">About</a>
+                <a href="blog.html" class="text-white hover:text-yellow-300 transition-colors duration-300 text-sm">Blog</a>
+                <a href="contact.html" class="text-white hover:text-yellow-300 transition-colors duration-300 text-sm">Contact</a>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 
 </html>

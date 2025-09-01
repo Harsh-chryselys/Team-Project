@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Frontend Training Cumulative Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-50">
+    <header>
+        <nav class="gradient-primary sticky top-0 z-50 px-5 md:px-10 lg:px-12 py-4">
+            <div class="flex justify-between items-center text-white">
+                <div class="flex items-center gap-3 text-xl md:text-2xl font-bold tracking-wide">
+                    <img id="logo-img" src='./src/assets/images/logo.png' alt="logo" class="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 object-contain rounded-2xl" />
+                    <span class="hidden md:inline">Frontend Training</span>
+                </div>
+                
+                <ul class="nav-links fixed md:static top-full left-0 w-full md:w-auto gradient-primary md:bg-none flex flex-col md:flex-row gap-0 md:gap-6 p-5 md:p-0 transform -translate-x-full md:translate-x-0 transition-transform duration-300">
+                    <li class="py-2 md:py-0 px-5 md:px-0">
+                        <a href="index.html" class="block text-white hover:text-yellow-300 transition-colors duration-300 py-2 md:py-0 font-medium">Home</a>
+                    </li>
+                    <li class="py-2 md:py-0 px-5 md:px-0">
+                        <a href="about.html" class="block text-white hover:text-yellow-300 transition-colors duration-300 py-2 md:py-0 font-medium">About</a>
+                    </li>
+                    <li class="py-2 md:py-0 px-5 md:px-0">
+                        <a href="#blog" class="block text-yellow-300 hover:text-yellow-300 transition-colors duration-300 py-2 md:py-0 font-medium">Blog</a>
+                    </li>
+                    <li class="py-2 md:py-0 px-5 md:px-0">
+                        <a href="contact.html" class="block text-white hover:text-yellow-300 transition-colors duration-300 py-2 md:py-0 font-medium">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="hamburger md:hidden flex flex-col cursor-pointer gap-1">
+                    <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+                    <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+                    <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Blog Header -->
+        <section class="gradient-hero text-white text-center py-20 px-5">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-4">Our Learning Journey Blog</h1>
+                <p class="text-lg md:text-xl opacity-90">Insights, tutorials, and experiences from our frontend development training</p>
+            </div>
+        </section>
+
+        <!-- Technical Blog Section -->
+        <section id="blog" class="py-16 sm:py-20 lg:py-24 bg-white">
+            <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                <div class="max-w-xl mx-auto text-center">
+                    <h2 class="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl xl:text-5xl">
+                        Our Technical Blog
+                    </h2>
+                    <p class="mt-4 text-base leading-7 text-gray-600 sm:mt-6">
+                        Explore the latest insights and trends in technology and development from our expert team.
+                    </p>
+                </div>
+
+                <!-- Blog Posts Grid -->
+                <div class="grid max-w-md grid-cols-1 gap-8 mx-auto mt-12 sm:mt-16 md:max-w-none md:grid-cols-2 lg:grid-cols-3">
+                    
+                    <!-- Blog Post Card 1 -->
+                    <div class="flex flex-col overflow-hidden transition-all duration-300 transform bg-white border border-gray-100 rounded-lg shadow-lg group hover:shadow-2xl hover:-translate-y-2">
+                        <a href="#" title="Link to blog post" class="block overflow-hidden">
+                            <img class="object-cover w-full h-56 transition-all duration-300 group-hover:scale-110" src="https://images.unsplash.com/photo-1605379399642-870262d3d051?auto=format&fit=crop&w=800&q=60" alt="Photo of code on a screen" />
+                        </a>
+                        <div class="flex flex-col flex-1 p-6">
+                            <div class="flex-1">
+                                <p class="text-sm font-semibold text-indigo-600">
+                                    Frontend
+                                </p>
+                                <a href="#" title="" class="block mt-3">
+                                    <p class="text-xl font-bold text-gray-900">
+                                        My Journey with Tailwind CSS
+                                    </p>
+                                    <p class="mt-4 text-base text-gray-600">
+                                        Discover how Tailwind's utility-first approach revolutionized my workflow and helped me build beautiful, custom designs without leaving HTML.
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="flex items-center pt-5 mt-auto border-t border-gray-200">
+                                <img class="flex-shrink-0 object-cover w-11 h-11 rounded-full" src="./src/assets/images/vikas.JPG" alt="Vikas Jha's avatar" />
+                                <div class="ml-4">
+                                    <p class="text-sm font-semibold text-gray-900">
+                                        Vikas Jha
+                                    </p>
+                                    <p class="text-sm text-gray-600">
+                                        Sep 1, 2025
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post Card 2 -->
+                    <div class="flex flex-col overflow-hidden transition-all duration-300 transform bg-white border border-gray-100 rounded-lg shadow-lg group hover:shadow-2xl hover:-translate-y-2">
+                         <a href="#" title="Link to blog post" class="block overflow-hidden">
+                            <img class="object-cover w-full h-56 transition-all duration-300 group-hover:scale-110" src="https://images.unsplash.com/photo-1547721064-da6cfb341d50?auto=format&fit=crop&w=800&q=60" alt="Abstract design image" />
+                        </a>
+                        <div class="flex flex-col flex-1 p-6">
+                            <div class="flex-1">
+                                <p class="text-sm font-semibold text-pink-600">
+                                    Design
+                                </p>
+                                <a href="#" title="" class="block mt-3">
+                                    <p class="text-xl font-bold text-gray-900">
+                                       Understanding Modern UI/UX Principles
+                                    </p>
+                                    <p class="mt-4 text-base text-gray-600">
+                                        A deep dive into the core principles that drive user-friendly and aesthetically pleasing interfaces in today's digital world.
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="flex items-center pt-5 mt-auto border-t border-gray-200">
+                                <img class="flex-shrink-0 object-cover w-11 h-11 rounded-full" src="https://via.placeholder.com/150" alt="Harshit Gunjal's avatar" />
+                                <div class="ml-4">
+                                    <p class="text-sm font-semibold text-gray-900">
+                                        Harshit Gunjal
+                                    </p>
+                                    <p class="text-sm text-gray-600">
+                                        Aug 28, 2025
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post Card 3 -->
+                    <div class="flex flex-col overflow-hidden transition-all duration-300 transform bg-white border border-gray-100 rounded-lg shadow-lg group hover:shadow-2xl hover:-translate-y-2">
+                        <a href="#" title="Link to blog post" class="block overflow-hidden">
+                            <img class="object-cover w-full h-56 transition-all duration-300 group-hover:scale-110" src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?auto=format&fit=crop&w=800&q=60" alt="JavaScript code" />
+                        </a>
+                        <div class="flex flex-col flex-1 p-6">
+                            <div class="flex-1">
+                                <p class="text-sm font-semibold text-yellow-600">
+                                    JavaScript
+                                </p>
+                                <a href="#" title="" class="block mt-3">
+                                    <p class="text-xl font-bold text-gray-900">
+                                        Mastering DOM Manipulation
+                                    </p>
+                                    <p class="mt-4 text-base text-gray-600">
+                                        Essential techniques for creating dynamic and interactive web experiences using vanilla JavaScript.
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="flex items-center pt-5 mt-auto border-t border-gray-200">
+                                <img class="flex-shrink-0 object-cover w-11 h-11 rounded-full" src="https://via.placeholder.com/150" alt="Palash Johri's avatar" />
+                                <div class="ml-4">
+                                    <p class="text-sm font-semibold text-gray-900">
+                                        Palash Johri
+                                    </p>
+                                    <p class="text-sm text-gray-600">
+                                        Aug 25, 2025
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post Card 4 -->
+                    <div class="flex flex-col overflow-hidden transition-all duration-300 transform bg-white border border-gray-100 rounded-lg shadow-lg group hover:shadow-2xl hover:-translate-y-2">
+                        <a href="#" title="Link to blog post" class="block overflow-hidden">
+                            <img class="object-cover w-full h-56 transition-all duration-300 group-hover:scale-110" src="https://images.unsplash.com/photo-1559028006-448665bd7c7f?auto=format&fit=crop&w=800&q=60" alt="Responsive design" />
+                        </a>
+                        <div class="flex flex-col flex-1 p-6">
+                            <div class="flex-1">
+                                <p class="text-sm font-semibold text-green-600">
+                                    Responsive
+                                </p>
+                                <a href="#" title="" class="block mt-3">
+                                    <p class="text-xl font-bold text-gray-900">
+                                        Mobile-First Design Approach
+                                    </p>
+                                    <p class="mt-4 text-base text-gray-600">
+                                        Why starting with mobile design leads to better user experiences across all devices and screen sizes.
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="flex items-center pt-5 mt-auto border-t border-gray-200">
+                                <img class="flex-shrink-0 object-cover w-11 h-11 rounded-full" src="https://via.placeholder.com/150" alt="Chesta Mehta's avatar" />
+                                <div class="ml-4">
+                                    <p class="text-sm font-semibold text-gray-900">
+                                        Chesta Mehta
+                                    </p>
+                                    <p class="text-sm text-gray-600">
+                                        Aug 22, 2025
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Call to Action Button -->
+                <div class="mt-12 text-center">
+                     <a href="#" title="View all blog posts" class="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white transition-all duration-200 bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600" role="button">
+                        View All Posts
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="gradient-primary text-white text-center py-8 px-5 mt-12 shadow-lg">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-sm tracking-wide">&copy; 2025 Frontend Training Cumulative Project. All rights reserved.</p>
+            <div class="flex gap-5 flex-wrap justify-center">
+                <a href="index.html" class="text-white hover:text-yellow-300 transition-colors duration-300 text-sm">Home</a>
+                <a href="about.html" class="text-white hover:text-yellow-300 transition-colors duration-300 text-sm">About</a>
+                <a href="contact.html" class="text-white hover:text-yellow-300 transition-colors duration-300 text-sm">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
